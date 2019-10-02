@@ -103,4 +103,5 @@
 	<title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<a href="/about">
+<h1>Great success!</h1></a>
