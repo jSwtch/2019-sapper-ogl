@@ -115,6 +115,7 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>TEST1</title>
 </svelte:head>
 
+<h1>Hello from test1</h1>
