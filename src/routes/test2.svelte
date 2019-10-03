@@ -1,6 +1,9 @@
-    <script>
-        import {Renderer, Camera, Geometry, Program, Mesh} from 'ogl/src/Core.js';
-        
+    <script >
+    import {onMount} from "svelte"
+    import {Renderer, Camera, Geometry, Program, Mesh} from 'ogl/src/Core.js';
+    
+        onMount(()=> {
+
         const vertex = `
             precision highp float;
             precision highp int;
@@ -94,6 +97,7 @@
                 renderer.render({scene: particles, camera});
             }
         }
+        })
 </script>
 <style>
 
