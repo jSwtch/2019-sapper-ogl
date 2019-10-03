@@ -2,6 +2,8 @@
     import {onMount} from "svelte"
     import {Renderer, Camera, Geometry, Program, Mesh} from 'ogl/src/Core.js';
     
+    let elOGL;
+
         onMount(()=> {
 
         const vertex = `
@@ -54,7 +56,8 @@
         {
             const renderer = new Renderer({depth: false});
             const gl = renderer.gl;
-            document.body.appendChild(gl.canvas);
+            elOGL.appendChild(gl.canvas);
+
             gl.clearColor(1, 1, 1, 1);
             const camera = new Camera(gl, {fov: 15});
             camera.position.z = 15;
@@ -109,3 +112,4 @@
 
 
 <h1>Hello from test2</h1>
+<div bind:this={elOGL}></div>
